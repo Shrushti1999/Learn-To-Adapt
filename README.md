@@ -1,1 +1,4 @@
-# One-For-All:MARS
+# One-For-All & MARS
+
+Reproducing the paper
+pip install -U sentence-transformers
