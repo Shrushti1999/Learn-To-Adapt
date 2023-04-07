@@ -1,4 +1,2 @@
-# One-For-All & MARS
+# Learn To Adapt
 
-Reproducing the paper
-pip install -U sentence-transformers
