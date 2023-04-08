@@ -1,18 +1,35 @@
-# Learn to Adapt for Generalized Zero-Shot Text Classification
+# Learn to Adapt 
 
-This repository is the official implementation of ["Learn to Adapt for Generalized Zero-Shot Text Classification"](https://aclanthology.org/2022.acl-long.39.pdf) (ACL 2022 main conference).
-The structure of our repository is based on the template https://github.com/victoresque/pytorch-template.
+This repository is the re-implementation of ["Learn to Adapt for Generalized Zero-Shot Text Classification"](https://aclanthology.org/2022.acl-long.39.pdf) (ACL 2022 main conference).
+
 
 ## Requirements
+1. First git clone  our repository.
 
-To set our environment, we recommend to use `anaconda3` with GPU supports.
+```shell
+git clone https://github.com/Shrushti1999/Learn-To-Adapt.git
+```
+
+2. To setup the environment, we recommend to use terminal which supports GPU.
 
 ```shell
 conda create -n lta python=3.7.9
+```
+
+```shell
+source ~/.bashrc
+```
+Activate the Conda environment lta
+
+```shell
 conda activate lta
 ```
 
-After we setup basic conda environment, install pytorch `torch=1.7.1` and install requirements:
+3. After we setup basic conda environment, install pytorch `torch=1.7.1`.
+```shell
+pip install pytorch=1.7.1
+```
+Later install requirements.
 
 ```shell
 pip install -r requirements.txt
@@ -20,42 +37,41 @@ pip install -r requirements.txt
 
 ## Datasets and Files
 
-1. For `BiLSTM` encoder, download `word2vec` English resource https://github.com/eyaler/word2vec-slim/blob/master/GoogleNews-vectors-negative300-SLIM.bin.gz, 
-and put the unzip `bin` file to the directory `data/resources`. For `BERT` encoder, we use `huggingface transformer` package with `AutoTokenizer` and `AutoModel`.
+1. download `word2vec` English resource https://github.com/eyaler/word2vec-slim/blob/master/GoogleNews-vectors-negative300-SLIM.bin.gz, 
+and put the unzip `bin` file to the directory `data/resources`.
 
-2. Preprocess data files to `pickle` binary file. Run preprocess scripts:
+2. Preprocess data set
 
    ```shell
    python data_preprocess.py
    ```
 
-   And `pickle` files will be stored in `data/ver{$version}/{$data_name}`. We give the splitting version mentioned in 
-   our paper, and you can split and keep the raw `.csv` files by yourself to other `$version`.
+   And `pickle` files will be stored in `data/ver1/CLINC`. 
 
 ## Training and Evaluation
 
-We use configuration files to store hyper-parameters for experiments in `config_{$data_name}_{$encoder_type}.json`
+We use configuration files to store hyper-parameters for experiments in `config_clinc_LTSM.json`
 
 For example, to train the **Metric Learning** model, run this command:
 
 ```shell
-python train.py -d {$GPU_device} -st1 1
+python train.py -d 0 -st1 1 -c config_Clinc_LSTM.json
 ```
 
 where `-st1` means step 1. If you want to run LTA w/o init, you do not need to run step 1 first. 
-All prototypes `pickle` files will be stored to `data/ver{$version}/{$data_name}/protos_{$encoder_type}.pkl`.
+
 
 To train the LTA in the paper, run step 2:
 
 ```shell
-python train.py -d {$GPU_device} -st2 1
+python train.py -d 0 -st2 1 -c config_Clinc_LSTM.json
 ```
 
 Or you can change any configurations in the `json` file.
 
-Debug mode is also provided, which does not generate experiment directory.
+
  
-# Citation
+# Reference
 ```
 @inproceedings{zhang-etal-2022-learn,
     title = "Learn to Adapt for Generalized Zero-Shot Text Classification",
@@ -76,5 +92,3 @@ Debug mode is also provided, which does not generate experiment directory.
 }
 ```
 
-# Other Configurations
-I am sorry that the configurations of BERT and other datasets are lost. I don't have time at the moment to rerun the experiments, but I will do it sooner or later (I have no machine because I have already graduated..). But I do think a non-pretrained encoder will be better for GZSL research, I think it more like a ML question rather than a NLP question.
