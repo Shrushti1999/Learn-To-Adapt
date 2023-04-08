@@ -25,9 +25,9 @@ Activate the Conda environment lta
 conda activate lta
 ```
 
-3. After we setup basic conda environment, install pytorch `torch=1.7.1`.
+3. After we setup basic conda environment, install torch.
 ```shell
-pip install pytorch==1.7.1
+pip install torch
 ```
 Later install requirements.
 
