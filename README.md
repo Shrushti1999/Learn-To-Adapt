@@ -69,7 +69,7 @@ To train the LTA in the paper, run step 2:
 python train.py -d 0 -st2 1 -c config_Clinc_LSTM.json
 ```
 
-Or you can change any configurations in the `json` file.
+Or you can change any configurations in the `json` file, to test different hyper-parameters.
 
 
  
