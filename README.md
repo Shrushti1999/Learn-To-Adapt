@@ -40,10 +40,10 @@ pip install -r requirements.txt
 
 ## Datasets and Files
 
-1. download `word2vec` English resource https://github.com/eyaler/word2vec-slim/blob/master/GoogleNews-vectors-negative300-SLIM.bin.gz, 
+1. Download `word2vec` English resource https://github.com/eyaler/word2vec-slim/blob/master/GoogleNews-vectors-negative300-SLIM.bin.gz, 
 and put the unzip `bin` file to the directory `data/resources`.
 
-2. Preprocess data set
+2. Preprocess the dataset
 
    ```shell
    python data_preprocess.py
@@ -55,7 +55,7 @@ and put the unzip `bin` file to the directory `data/resources`.
 
 We use configuration files to store hyper-parameters for experiments in `config_clinc_LTSM.json`
 
-For example, to train the **Metric Learning** model, run this command:
+To train the **Metric Learning** model, run this command:
 
 ```shell
 python train.py -d 0 -st1 1 -c config_Clinc_LSTM.json
