@@ -6,37 +6,36 @@ This repository is the re-implementation of ["Learn to Adapt for Generalized Zer
 ## Requirements
 1. First git clone  our repository.
 
-```shell
-git clone https://github.com/Shrushti1999/Learn-To-Adapt.git
-```
+   ```shell
+   git clone https://github.com/Shrushti1999/Learn-To-Adapt.git
+   ```
 
 2. To setup the environment, we recommend to use a terminal that supports GPU.
 
-```shell
-conda create -n lta python=3.7.9
-```
+   ```shell
+   conda create -n lta python=3.7.9
+   ```
+   ```shell
+   source ~/.bashrc
+   ```
+   Activate the conda environment `lta`.
 
-```shell
-source ~/.bashrc
-```
-Activate the conda environment lta
+   ```shell
+   conda activate lta
+   ```
 
-```shell
-conda activate lta
-```
+3. After we setup basic conda environment, install `torch` and `gensim`.
+   ```shell
+   pip install torch
+   ```
+   ```shell
+   pip install gensim==3.8.1
+   ```
+   Later install requirements.
 
-3. After we setup basic conda environment, install torch and gensim.
-```shell
-pip install torch
-```
-```shell
-pip install gensim==3.8.1
-```
-Later install requirements.
-
-```shell
-pip install -r requirements.txt
-```
+   ```shell
+   pip install -r requirements.txt
+   ```
 
 ## Datasets and Files
 
@@ -44,7 +43,7 @@ pip install -r requirements.txt
 and put the unzip `bin` file to the directory `data/resources`.
 
 2. Preprocess the dataset
-
+   
    ```shell
    python data_preprocess.py
    ```
