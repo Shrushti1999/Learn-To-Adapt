@@ -10,7 +10,7 @@ This repository is the re-implementation of ["Learn to Adapt for Generalized Zer
 git clone https://github.com/Shrushti1999/Learn-To-Adapt.git
 ```
 
-2. To setup the environment, we recommend to use terminal which supports GPU.
+2. To setup the environment, we recommend to use a terminal that supports GPU.
 
 ```shell
 conda create -n lta python=3.7.9
@@ -19,15 +19,18 @@ conda create -n lta python=3.7.9
 ```shell
 source ~/.bashrc
 ```
-Activate the Conda environment lta
+Activate the conda environment lta
 
 ```shell
 conda activate lta
 ```
 
-3. After we setup basic conda environment, install torch.
+3. After we setup basic conda environment, install torch and gensim.
 ```shell
 pip install torch
+```
+```shell
+pip install gensim==3.8.1
 ```
 Later install requirements.
 
