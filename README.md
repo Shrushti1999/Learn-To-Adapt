@@ -71,13 +71,13 @@ python train.py -d 0 -st2 1 -c config_Clinc_LSTM.json
 
 Or you can change any configurations in the `json` file, to test different hyper-parameters.
 
-##Robustness
+## Robustness
 
-Cut the ```shelltrain_seen.csv``` and paste it in the Learn-To-Adapt folder. Run the ```shellRobustness.ipynb``` file to generate the noisy dataset. You can also see the dataset ```shelltrain_seen Robustness.cs ```
+Cut the ```train_seen.csv``` and paste it in the Learn-To-Adapt folder. Run the ```Robustness.ipynb``` file to generate the noisy dataset. You can also see the dataset ```train_seen Robustness.cs ```
 
-##Multilinguality
+## Multilinguality
 
-Cut the ```shelltrain_seen.csv``` and paste it in the Learn-To-Adapt folder. Run the ```shellMultilinguality.ipynb``` file to generate the multilingual dataset. You can also see the dataset ```shelltrain_seen Multilinguality.cs ```
+Cut the ```train_seen.csv``` and paste it in the Learn-To-Adapt folder. Run the ```Multilinguality.ipynb``` file to generate the multilingual dataset. You can also see the dataset ```train_seen Multilinguality.cs ```
  
 # Reference
 ```
