@@ -1,6 +1,6 @@
 # Learn to Adapt 
 
-This repository is the re-implementation of ["Learn to Adapt for Generalized Zero-Shot Text Classification"](https://aclanthology.org/2022.acl-long.39.pdf) (ACL 2022 main conference). The reproducibility report can be found here under the name ["report final lta"].
+This repository is the re-implementation of ["Learn to Adapt for Generalized Zero-Shot Text Classification"](https://aclanthology.org/2022.acl-long.39.pdf) (ACL 2022 main conference). The reproducibility report can be found here under the name "report final lta".
 
 
 ## Requirements
